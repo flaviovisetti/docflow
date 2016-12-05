@@ -1,0 +1,52 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/campuscode3/workspace/docflow/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/campuscode3/workspace/docflow/app/controllers/home_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/campuscode3/workspace/docflow/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/campuscode3/workspace/docflow/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/campuscode3/workspace/docflow/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/campuscode3/workspace/docflow/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/campuscode3/workspace/docflow/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/campuscode3/workspace/docflow/app/models/application_record.rb": [
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1480974833
+  }
+}
