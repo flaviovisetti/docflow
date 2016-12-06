@@ -19,4 +19,12 @@ feature 'user create a company' do
     expect(page).to have_content(company.mail)
     expect(page).to have_content(company.legal_number)
   end
+  scenario 'and does not allow create with blank fields' do
+    visit root_path
+    click_on 'Cadastrar Empresa'
+
+    click_on 'Cadastrar'
+
+    expect(page).to have_content('Não é possível cadastrar empresa.')
+  end
 end

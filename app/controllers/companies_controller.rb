@@ -4,14 +4,22 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new(params.require(:company).permit(:legal_name,
-                                                           :mail,
-                                                           :legal_number))
-    @company.save
-    redirect_to @company
+    @company = Company.new(set_params)
+    if @company.save
+      redirect_to @company
+    else
+      flash.now[:alert] = 'Não é possível cadastrar empresa.'
+      render :new
+    end
   end
 
   def show
     @company = Company.find(params[:id])
+  end
+
+  private
+
+  def set_params
+    params.require(:company).permit(:legal_name, :mail, :legal_number)
   end
 end
