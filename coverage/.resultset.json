@@ -5,13 +5,17 @@
         1,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/models/user.rb": [
-        1,
-        1,
+      "/Users/campuscode3/workspace/docflow/app/models/company.rb": [
         1,
         null
       ],
       "/Users/campuscode3/workspace/docflow/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/campuscode3/workspace/docflow/app/models/user.rb": [
+        1,
         1,
         1,
         null
@@ -29,17 +33,35 @@
       "/Users/campuscode3/workspace/docflow/app/controllers/users_controller.rb": [
         1,
         1,
+        4,
+        null,
+        null,
+        1,
+        4,
+        4,
+        2,
+        null,
+        2,
         2,
         null,
         null,
+        null,
         1,
         2,
-        2,
+        null,
+        null
+      ],
+      "/Users/campuscode3/workspace/docflow/app/controllers/companies_controller.rb": [
         1,
+        1,
+        1,
+        null,
         null,
         1,
         1,
         null,
+        1,
+        1,
         null,
         null,
         1,
@@ -70,6 +92,6 @@
         0
       ]
     },
-    "timestamp": 1480982583
+    "timestamp": 1481057197
   }
 }

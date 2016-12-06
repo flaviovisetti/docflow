@@ -1,0 +1,6 @@
+<%= simple_form_for @company do |f| %>
+  <%= f.input :legal_name, label: 'Razão Social' %>
+  <%= f.input :mail, label: 'Email' %>
+  <%= f.input :legal_number, label: 'Registro Legal' %>
+  <%= f.submit 'Cadastrar' %>
+<% end %>
