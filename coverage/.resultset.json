@@ -95,31 +95,6 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/tickets_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/campuscode3/workspace/docflow/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -127,6 +102,31 @@
         0
       ],
       "/Users/campuscode3/workspace/docflow/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/campuscode3/workspace/docflow/app/controllers/tickets_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -143,6 +143,6 @@
         0
       ]
     },
-    "timestamp": 1481067459
+    "timestamp": 1481068681
   }
 }

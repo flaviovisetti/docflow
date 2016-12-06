@@ -10,4 +10,12 @@ feature 'user sign in' do
     expect(page).to have_content('Email')
     expect(page).to have_content('Senha')
   end
+
+  scenario 'user only see if as logged' do
+    visit root_path
+
+    expect(page).to_not have_content('Cadastrar Usuário')
+    expect(page).to_not have_content('Cadastrar Empresa')
+    expect(page).to_not have_content('Registrar Ticket')
+  end
 end

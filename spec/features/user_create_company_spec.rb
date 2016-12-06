@@ -2,7 +2,10 @@ require 'rails_helper'
 
 feature 'user create a company' do
   scenario 'successfully to create' do
+    person = create(:person)
     company = build(:company)
+
+    login_as(person)
 
     visit root_path
     click_on 'Cadastrar Empresa'
@@ -20,6 +23,10 @@ feature 'user create a company' do
     expect(page).to have_content(company.legal_number)
   end
   scenario 'and does not allow create with blank fields' do
+    person = create(:person)
+
+    login_as(person)
+
     visit root_path
     click_on 'Cadastrar Empresa'
 

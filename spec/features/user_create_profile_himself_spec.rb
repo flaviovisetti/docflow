@@ -2,7 +2,10 @@ require 'rails_helper'
 
 feature 'user create profile himself' do
   scenario 'create the profile succesfully' do
+    person = create(:person)
     single_user = build(:user)
+
+    login_as(person)
 
     visit root_path
     click_on 'Cadastrar Usuário'
@@ -20,6 +23,10 @@ feature 'user create profile himself' do
     expect(page).to have_content(single_user.birthdate)
   end
   scenario 'try save empty profile' do
+    person = create(:person)
+
+    login_as(person)
+
     visit root_path
 
     click_on 'Cadastrar Usuário'
