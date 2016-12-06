@@ -1,0 +1,8 @@
+<%= simple_form_for @ticket do |f| %>
+  <%= f.association :user, value_method: :id, label_method: :name, label: 'Usuário' %>
+  <%= f.input :title, label: 'Título' %>
+  <%= f.input :description, label: 'Descrição' %>
+  <%= f.input :recipient, label: 'Destinatário' %>
+  <%= f.input :status, label: 'Status' %>
+  <%= f.submit 'Registrar' %>
+<% end %>
