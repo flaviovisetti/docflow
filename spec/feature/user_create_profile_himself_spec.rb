@@ -19,4 +19,13 @@ feature 'user create profile himself' do
     expect(page).to have_content(single_user.mail)
     expect(page).to have_content(single_user.birthdate)
   end
+  scenario 'try save empty profile' do
+    visit root_path
+
+    click_on 'Cadastrar Usuário'
+
+    click_on 'Cadastrar'
+
+    expect(page).to have_content('Não possível criar usuário')
+  end
 end

@@ -5,8 +5,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params.require(:user).permit(:name, :mail, :birthdate))
-    @user.save
-    redirect_to @user
+    if @user.save
+      redirect_to @user
+    else
+      flash.now[:alert] = 'Não possível criar usuário'
+      render :new
+    end
   end
 
   def show
