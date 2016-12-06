@@ -33,27 +33,6 @@
         1,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/users_controller.rb": [
-        1,
-        1,
-        4,
-        null,
-        null,
-        1,
-        4,
-        4,
-        2,
-        null,
-        2,
-        2,
-        null,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
       "/Users/campuscode3/workspace/docflow/app/controllers/companies_controller.rb": [
         1,
         1,
@@ -81,6 +60,27 @@
         null,
         null
       ],
+      "/Users/campuscode3/workspace/docflow/app/controllers/users_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/campuscode3/workspace/docflow/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -104,6 +104,6 @@
         0
       ]
     },
-    "timestamp": 1481058154
+    "timestamp": 1481061290
   }
 }
