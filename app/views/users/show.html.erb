@@ -1,3 +1,18 @@
 <strong><%= @user.name %></strong>
-<p><%= @user.phone %></p>
-<p><%= @user.birthdate %></p>
+<%= link_to 'Registrar Ticket', new_ticket_path %>
+<%= link_to 'Logout', destroy_person_session_path %>
+
+<table>
+  <tr>
+    <th>Título</th>
+    <th>Destinatário</th>
+    <th>Status</th>
+  </tr>
+  <% @user.tickets.each do |t| %>
+    <tr>
+      <td><%= t.title %></td>
+      <td><%= t.recipient %></td>
+      <td><%= t.status %></td>
+    </tr>
+  <% end %>
+</table>

@@ -20,8 +20,6 @@ feature 'user create profile himself' do
     end
 
     expect(page).to have_css('strong', text: single_user.name)
-    expect(page).to have_content(single_user.phone)
-    expect(page).to have_content(single_user.birthdate)
   end
   scenario 'try save empty profile' do
     person = create(:person)
