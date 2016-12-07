@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-07T20:58:21-02:00">2016-12-07T20:58:21-02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-07T21:49:39-02:00">2016-12-07T21:49:39-02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">81.08%</span></span>
+    (<span class="covered_percent"><span class="yellow">82.05%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.94
+         0.96
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>15</b> files in total.
-    <b>74</b> relevant lines. 
-    <span class="green"><b>60</b> lines covered</span> and
+    <b>16</b> files in total.
+    <b>78</b> relevant lines. 
+    <span class="green"><b>64</b> lines covered</span> and
     <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -101,6 +101,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#ead15c60dc32c7b4b9ec97477f0ccfb2543d43bf" class="src_link" title="app/controllers/registrations_controller.rb">app/controllers/registrations_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#a7aa2b4122bb20ec46fc1328ac01e9b0b8a1ff51" class="src_link" title="app/controllers/tickets_controller.rb">app/controllers/tickets_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>22</td>
@@ -117,7 +127,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -213,15 +223,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.22
+         1.23
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>5</b> files in total.
-    <b>44</b> relevant lines. 
-    <span class="green"><b>44</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>48</b> relevant lines. 
+    <span class="green"><b>48</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -269,6 +279,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#ead15c60dc32c7b4b9ec97477f0ccfb2543d43bf" class="src_link" title="app/controllers/registrations_controller.rb">app/controllers/registrations_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#a7aa2b4122bb20ec46fc1328ac01e9b0b8a1ff51" class="src_link" title="app/controllers/tickets_controller.rb">app/controllers/tickets_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>22</td>
@@ -285,7 +305,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.5</td>
       </tr>
       
     </tbody>
@@ -949,6 +969,66 @@
   </pre>
 </div>
       
+        <div class="source_table" id="ead15c60dc32c7b4b9ec97477f0ccfb2543d43bf">
+  <div class="header">
+    <h3>app/controllers/registrations_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class RegistrationsController &lt; Devise::RegistrationsController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  protected</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def after_sign_up_path_for(resource)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    new_user_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="a7aa2b4122bb20ec46fc1328ac01e9b0b8a1ff51">
   <div class="header">
     <h3>app/controllers/tickets_controller.rb</h3>
@@ -1125,8 +1205,8 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="3">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
           
           <code class="ruby">    @user = User.new</code>
         </li>

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'user visit panel' do
-  scenario 'user acess his panel' do
+  scenario 'user access his panel' do
     person = create(:person)
     user = create(:user, person: person)
     create(:ticket, user: user)
@@ -16,5 +16,18 @@ feature 'user visit panel' do
     expect(page).to have_content(user.tickets.first.status)
     expect(page).to have_content('Registrar Ticket')
     expect(page).to have_content('Logout')
+  end
+
+  scenario 'and direct to his panel after signed up' do
+    person = build(:person)
+
+    visit new_person_registration_path
+
+    fill_in 'Email', with: person.email
+    fill_in 'person[password]', with: person.password
+    fill_in 'person[password_confirmation]', with: person.password
+    click_on 'Sign up'
+
+    expect(current_path).to eq(new_user_path)
   end
 end
