@@ -15,7 +15,6 @@ feature 'user create ticket' do
     fill_in 'Título', with: ticket.title
     fill_in 'Descrição', with: ticket.description
     fill_in 'Destinatário', with: ticket.recipient
-    fill_in 'Status', with: ticket.status
 
     click_on 'Registrar'
 

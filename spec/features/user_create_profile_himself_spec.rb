@@ -11,7 +11,7 @@ feature 'user create profile himself' do
     click_on 'Cadastrar Usuário'
 
     fill_in 'Nome Completo', with: single_user.name
-    fill_in 'E-mail', with: single_user.mail
+    fill_in 'Telefone', with: single_user.phone
     fill_in 'Data Nascimento', with: single_user.birthdate
 
     within('form') do
@@ -19,7 +19,7 @@ feature 'user create profile himself' do
     end
 
     expect(page).to have_css('strong', text: single_user.name)
-    expect(page).to have_content(single_user.mail)
+    expect(page).to have_content(single_user.phone)
     expect(page).to have_content(single_user.birthdate)
   end
   scenario 'try save empty profile' do

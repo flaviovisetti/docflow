@@ -4,7 +4,7 @@ class CreateTickets < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.string :recipient
-      t.string :status
+      t.string :status, default: 'Em Aberto'
       t.references :user, foreign_key: true
 
       t.timestamps
