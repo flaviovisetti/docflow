@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'user create ticket' do
   scenario 'user create ticket succesfully' do
     person = create(:person)
-    user = create(:user)
+    user = create(:user, person: person)
     ticket = build(:ticket, user: user)
 
     login_as(person)

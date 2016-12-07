@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'user create profile himself' do
   scenario 'create the profile succesfully' do
     person = create(:person)
-    single_user = build(:user)
+    single_user = build(:user, person_id: person)
 
     login_as(person)
 
@@ -11,6 +11,7 @@ feature 'user create profile himself' do
     click_on 'Cadastrar Usuário'
 
     fill_in 'Nome Completo', with: single_user.name
+    select person.email, from: 'email'
     fill_in 'Telefone', with: single_user.phone
     fill_in 'Data Nascimento', with: single_user.birthdate
 

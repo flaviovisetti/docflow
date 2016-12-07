@@ -1,4 +1,5 @@
 <%= simple_form_for @user do |u| %>
+  <%= u.association :person, value_method: :id, label_method: :email, label: 'email' %>
   <%= u.input :name, label: 'Nome Completo' %>
   <%= u.input :phone, label: 'Telefone' %>
   <%= u.input :birthdate, label: 'Data Nascimento' %>
