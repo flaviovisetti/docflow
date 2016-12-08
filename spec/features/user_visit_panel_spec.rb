@@ -18,7 +18,7 @@ feature 'user visit panel' do
     expect(page).to have_content('Logout')
   end
 
-  scenario 'and direct to his panel after signed up' do
+  scenario 'and direct to registration after signed up' do
     person = build(:person)
 
     visit new_person_registration_path
@@ -29,5 +29,18 @@ feature 'user visit panel' do
     click_on 'Sign up'
 
     expect(current_path).to eq(new_user_path)
+  end
+
+  scenario 'and direct to his panel after signed in' do
+    person = create(:person)
+    user = create(:user, person: person)
+
+    visit new_person_session_path
+
+    fill_in 'Email', with: person.email
+    fill_in 'Senha', with: person.password
+    click_on 'Entrar'
+
+    expect(current_path).to eq(user_path(user.id)) 
   end
 end

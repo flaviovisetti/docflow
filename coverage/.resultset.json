@@ -46,6 +46,13 @@
       "/Users/campuscode3/workspace/docflow/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/campuscode3/workspace/docflow/app/controllers/companies_controller.rb": [
@@ -92,7 +99,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
@@ -158,6 +165,6 @@
         0
       ]
     },
-    "timestamp": 1481154579
+    "timestamp": 1481156035
   }
 }
