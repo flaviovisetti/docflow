@@ -41,6 +41,6 @@ feature 'user visit panel' do
     fill_in 'Senha', with: person.password
     click_on 'Entrar'
 
-    expect(current_path).to eq(user_path(user.id)) 
+    expect(current_path).to eq(user_path(user.id))
   end
 end

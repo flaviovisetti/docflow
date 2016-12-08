@@ -1,5 +1,11 @@
-<strong><%= @ticket.title %></strong>
-<p>Descrição: <%= @ticket.description %></p>
-<p>Destinatário: <%= @ticket.recipient %></p>
-<p>Originador: <%= @ticket.user.name %></p>
-<p>Status: <%= @ticket.status %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @ticket.title %></h3>
+  </div>
+  <div class="panel-body">
+    <p>Descrição: <%= @ticket.description %></p>
+    <p>Destinatário: <%= @ticket.recipient %></p>
+    <p>Originador: <%= @ticket.user.name %></p>
+    <p>Status: <%= @ticket.status %></p>
+  </div>
+</div>
