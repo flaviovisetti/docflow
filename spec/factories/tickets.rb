@@ -6,5 +6,6 @@ FactoryGirl.define do
     recipient 'sac@senado.gov.br'
     status 'Em Aberto'
     user
+    attach { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
   end
 end

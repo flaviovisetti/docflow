@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207213037) do
+ActiveRecord::Schema.define(version: 20161208235144) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "legal_name"
@@ -41,10 +41,14 @@ ActiveRecord::Schema.define(version: 20161207213037) do
     t.string   "title"
     t.text     "description"
     t.string   "recipient"
-    t.string   "status",      default: "Em Aberto"
+    t.string   "status",              default: "Em Aberto"
     t.integer  "user_id"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.string   "attach_file_name"
+    t.string   "attach_content_type"
+    t.integer  "attach_file_size"
+    t.datetime "attach_updated_at"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
