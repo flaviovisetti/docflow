@@ -28,6 +28,8 @@
       "/home/fvisetti/Documentos/SysRails/docflow/app/models/ticket.rb": [
         1,
         1,
+        1,
+        1,
         null
       ],
       "/home/fvisetti/Documentos/SysRails/docflow/app/models/user.rb": [
@@ -191,6 +193,6 @@
         0
       ]
     },
-    "timestamp": 1481389450
+    "timestamp": 1481392832
   }
 }

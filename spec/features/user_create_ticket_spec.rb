@@ -15,6 +15,7 @@ feature 'user create ticket' do
     fill_in 'Título', with: ticket.title
     fill_in 'Descrição', with: ticket.description
     fill_in 'Destinatário', with: ticket.recipient
+    attach_file('Anexos', 'spec/support/fixtures/image.jpg')
 
     click_on 'Registrar'
 
@@ -23,5 +24,6 @@ feature 'user create ticket' do
     expect(page).to have_content(ticket.recipient)
     expect(page).to have_content(ticket.user.name)
     expect(page).to have_content(ticket.status)
+    expect(page).to have_content(ticket.attach_file_name)
   end
 end

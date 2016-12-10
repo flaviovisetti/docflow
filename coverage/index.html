@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-10T15:04:10-02:00">2016-12-10T15:04:10-02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-10T16:00:32-02:00">2016-12-10T16:00:32-02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">84.38%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.69%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>17</b> files in total.
-    <b>96</b> relevant lines. 
-    <span class="green"><b>81</b> lines covered</span> and
+    <b>98</b> relevant lines. 
+    <span class="green"><b>83</b> lines covered</span> and
     <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -193,9 +193,9 @@
       <tr>
         <td class="strong"><a href="#15689360ea92449f86781762d8693513b4c1fb55" class="src_link" title="app/models/ticket.rb">app/models/ticket.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -337,8 +337,8 @@
   <a name="Models"></a>
   <div>
     <b>5</b> files in total.
-    <b>15</b> relevant lines. 
-    <span class="green"><b>15</b> lines covered</span> and
+    <b>17</b> relevant lines. 
+    <span class="green"><b>17</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -388,9 +388,9 @@
       <tr>
         <td class="strong"><a href="#15689360ea92449f86781762d8693513b4c1fb55" class="src_link" title="app/models/ticket.rb">app/models/ticket.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
+        <td>5</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1294,7 +1294,7 @@
         <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
-          <code class="ruby">    params.require(:ticket).permit(:title, :description, :recipient, :user_id)</code>
+          <code class="ruby">    params.require(:ticket).permit(:title, :description, :recipient, :user_id, :attach)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
@@ -1726,8 +1726,8 @@
     <h3>app/models/ticket.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1747,7 +1747,19 @@
           <code class="ruby">  belongs_to :user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_attached_file :attach, styles: { medium: &quot;300x300&gt;&quot;, thumb: &quot;100x100&gt;&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  do_not_validate_attachment_file_type :attach</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
