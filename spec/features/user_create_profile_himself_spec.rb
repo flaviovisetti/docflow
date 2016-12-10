@@ -7,8 +7,7 @@ feature 'user create profile himself' do
 
     login_as(person)
 
-    visit root_path
-    click_on 'Cadastrar Usuário'
+    visit new_user_path
 
     fill_in 'Nome Completo', with: single_user.name
     select person.email, from: 'email'
@@ -26,9 +25,7 @@ feature 'user create profile himself' do
 
     login_as(person)
 
-    visit root_path
-
-    click_on 'Cadastrar Usuário'
+    visit new_user_path
 
     click_on 'Cadastrar'
 

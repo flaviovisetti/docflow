@@ -40,9 +40,31 @@
         1,
         null
       ],
-      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/home_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/users_controller.rb": [
         1,
         1,
+        4,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
         null
       ],
       "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/application_controller.rb": [
@@ -73,33 +95,6 @@
         null,
         1,
         1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/users_controller.rb": [
-        1,
-        1,
-        4,
-        null,
-        null,
-        1,
-        2,
-        2,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        4,
         null,
         null,
         1,
@@ -161,6 +156,11 @@
         null,
         null
       ],
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/registrations_controller.rb": [
         1,
         1,
@@ -193,6 +193,6 @@
         0
       ]
     },
-    "timestamp": 1481392986
+    "timestamp": 1481393818
   }
 }

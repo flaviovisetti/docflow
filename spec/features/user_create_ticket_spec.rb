@@ -8,7 +8,7 @@ feature 'user create ticket' do
 
     login_as(person)
 
-    visit root_path
+    visit user_path(user.id)
 
     click_on 'Registrar Ticket'
     select ticket.user.name, from: 'Usuário'

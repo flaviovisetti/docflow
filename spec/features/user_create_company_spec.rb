@@ -3,11 +3,12 @@ require 'rails_helper'
 feature 'user create a company' do
   scenario 'successfully to create' do
     person = create(:person)
+    user = create(:user, person: person)
     company = build(:company)
 
     login_as(person)
 
-    visit root_path
+    visit user_path(user.id)
     click_on 'Cadastrar Empresa'
 
     fill_in 'Razão Social', with: company.legal_name
@@ -24,10 +25,11 @@ feature 'user create a company' do
   end
   scenario 'and does not allow create with blank fields' do
     person = create(:person)
+    user = create(:user, person: person)
 
     login_as(person)
 
-    visit root_path
+    visit user_path(user.id)
     click_on 'Cadastrar Empresa'
 
     click_on 'Cadastrar'

@@ -20,9 +20,9 @@ feature 'user visit home page' do
     person = create(:person)
 
     login_as(person)
-    
+
     visit root_path
 
-    expect(page).to have_content('Painel do Usuário')
+    expect(page).to have_content('Painel do usuário')
   end
 end
