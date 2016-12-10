@@ -6,6 +6,7 @@ feature 'user visit home page' do
 
     expect(page).to have_css('h1', text: 'Welcome a board')
   end
+
   scenario 'succesfully read product presentation' do
     visit root_path
 
@@ -13,5 +14,15 @@ feature 'user visit home page' do
     expect(page).to have_content('Bem-vindo! As interações entre seu
       time acabaram de ficar mais fáceis e ágeis,
       atravez de uma interface intuitiva e com vários recursos.')
+  end
+
+  scenario 'and if user does log in' do
+    person = create(:person)
+
+    login_as(person)
+    
+    visit root_path
+
+    expect(page).to have_content('Painel do Usuário')
   end
 end
