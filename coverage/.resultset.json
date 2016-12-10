@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/campuscode3/workspace/docflow/app/models/person.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/models/person.rb": [
         1,
         null,
         null,
@@ -9,41 +9,41 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/models/application_record.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/helpers/application_helper.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/models/company.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/campuscode3/workspace/docflow/app/models/ticket.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/campuscode3/workspace/docflow/app/models/user.rb": [
-        1,
+      "/home/fvisetti/Documentos/SysRails/docflow/app/models/company.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/home_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/models/ticket.rb": [
         1,
         1,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/application_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -53,7 +53,7 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/companies_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/companies_controller.rb": [
         1,
         1,
         2,
@@ -80,7 +80,7 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/users_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/users_controller.rb": [
         1,
         1,
         4,
@@ -107,7 +107,7 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/tickets_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/tickets_controller.rb": [
         1,
         1,
         null,
@@ -145,7 +145,7 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/policies/tickets_policies.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/policies/tickets_policies.rb": [
         1,
         1,
         null,
@@ -159,7 +159,7 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/controllers/registrations_controller.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/registrations_controller.rb": [
         1,
         1,
         null,
@@ -168,29 +168,29 @@
         null,
         null
       ],
-      "/Users/campuscode3/workspace/docflow/app/channels/application_cable/channel.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode3/workspace/docflow/app/channels/application_cable/connection.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/fvisetti/Documentos/SysRails/docflow/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/campuscode3/workspace/docflow/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/campuscode3/workspace/docflow/app/mailers/application_mailer.rb": [
+      "/home/fvisetti/Documentos/SysRails/docflow/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1481239925
+    "timestamp": 1481389450
   }
 }
