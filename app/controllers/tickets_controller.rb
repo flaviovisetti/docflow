@@ -24,7 +24,7 @@ class TicketsController < ApplicationController
   private
 
   def valid_ticket
-    user = User.find_by(person_id: current_person.id)
+    user = set_line_user
     @ticket = Ticket.find(params[:id])
 
     validar = TicketsPolicies.new(user, @ticket)
@@ -43,4 +43,5 @@ class TicketsController < ApplicationController
     params.require(:ticket).permit(:title, :description, :recipient,
                                    :user_id, :attach)
   end
+
 end
