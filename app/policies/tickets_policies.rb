@@ -9,5 +9,4 @@ class TicketsPolicies
   def own_ticket?
     user.id == ticket.user_id
   end
-
 end

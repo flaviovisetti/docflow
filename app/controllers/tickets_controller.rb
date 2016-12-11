@@ -43,5 +43,4 @@ class TicketsController < ApplicationController
     params.require(:ticket).permit(:title, :description, :recipient,
                                    :user_id, :attach)
   end
-
 end

@@ -48,6 +48,9 @@
       "/home/fvisetti/Documentos/SysRails/docflow/app/controllers/users_controller.rb": [
         1,
         1,
+        1,
+        null,
+        1,
         4,
         null,
         null,
@@ -62,13 +65,22 @@
         null,
         null,
         1,
-        9,
+        10,
+        10,
         null,
         null,
         1,
         null,
         1,
         2,
+        null,
+        null,
+        1,
+        20,
+        null,
+        null,
+        1,
+        20,
         null,
         null
       ],
@@ -155,7 +167,6 @@
         2,
         null,
         null,
-        null,
         null
       ],
       "/home/fvisetti/Documentos/SysRails/docflow/app/policies/tickets_policies.rb": [
@@ -169,7 +180,6 @@
         null,
         1,
         2,
-        null,
         null,
         null
       ],
@@ -219,6 +229,6 @@
         0
       ]
     },
-    "timestamp": 1481469241
+    "timestamp": 1481475538
   }
 }

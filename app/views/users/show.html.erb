@@ -3,22 +3,47 @@
     <h3 class="panel-title"><%= @user.name %></h3>
   </div>
   <div class="panel-body">
-    <p>Tickets which you have opened.</p>
-  </div>
-  <table class="table">
-    <tr>
-      <th> # </th>
-      <th>Título</th>
-      <th>Destinatário</th>
-      <th>Status</th>
-    </tr>
-    <% @user.tickets.each do |t| %>
+    <table class="table">
       <tr>
-        <td><%= t.id %></td>
-        <td><%= link_to t.title, t %></td>
-        <td><%= t.recipient %></td>
-        <td><%= t.status %></td>
+        <th> # </th>
+        <th>Título</th>
+        <th>Remetente</th>
+        <th>Destinatário</th>
+        <th>Status</th>
       </tr>
-    <% end %>
-  </table>
+      <% @user.tickets.each do |t| %>
+        <tr>
+          <td><%= t.id %></td>
+          <td><%= link_to t.title, t %></td>
+          <td><%= t.user.name %></td>
+          <td><%= t.recipient %></td>
+          <td><%= t.status %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Fila de tickets para aprovação</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <th> # </th>
+        <th>Título</th>
+        <th>Remetente</th>
+        <th>Destinatário</th>
+        <th>Status</th>
+      </tr>
+      <% if !@others_ticket.nil? %>
+        <tr>
+          <td><%= @others_ticket.id %></td>
+          <td><%= link_to @others_ticket.title, @others_ticket %></td>
+          <td><%= @others_ticket.user.name %></td>
+          <td><%= @others_ticket.recipient %></td>
+          <td><%= @others_ticket.status %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
