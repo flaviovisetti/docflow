@@ -28,7 +28,7 @@ class TicketsController < ApplicationController
     @ticket = Ticket.find(params[:id])
 
     validar = TicketsPolicies.new(user, @ticket)
-    if validar.own_ticket?
+    if validar.own_ticket?(current_person.email)
       render :show
     else
       redirect_to user_path(user.id)

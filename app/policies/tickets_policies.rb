@@ -6,7 +6,7 @@ class TicketsPolicies
     @ticket = ticket
   end
 
-  def own_ticket?
-    user.id == ticket.user_id
+  def own_ticket?(email)
+    (user.id == ticket.user_id) || (ticket.recipient == email)
   end
 end
