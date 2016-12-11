@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def user_recipient_tickets
-    Ticket.find_by(recipient: current_person.email)
+    Ticket.where(recipient: current_person.email)
   end
 
   def set_param_user

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-11T15:25:25-02:00">2016-12-11T15:25:25-02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-11T16:01:45-02:00">2016-12-11T16:01:45-02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.69
+         1.72
        </span>
     </span> hits/line)
   </h2>
@@ -127,7 +127,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>4.0</td>
+        <td>4.2</td>
       </tr>
       
       <tr>
@@ -233,7 +233,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.21
+         2.27
        </span>
     </span> hits/line)
   </h2>
@@ -315,7 +315,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>4.0</td>
+        <td>4.2</td>
       </tr>
       
     </tbody>
@@ -1555,14 +1555,14 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="20">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="20">
+          <span class="hits">11</span>
           
           <code class="ruby">    @user = set_param_user</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="21">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="21">
+          <span class="hits">11</span>
           
           <code class="ruby">    @others_ticket = user_recipient_tickets</code>
         </li>
@@ -1621,10 +1621,10 @@
           <code class="ruby">  def user_recipient_tickets</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="31">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="31">
+          <span class="hits">22</span>
           
-          <code class="ruby">    Ticket.find_by(recipient: current_person.email)</code>
+          <code class="ruby">    Ticket.where(recipient: current_person.email)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
@@ -1645,8 +1645,8 @@
           <code class="ruby">  def set_param_user</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="35">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="35">
+          <span class="hits">22</span>
           
           <code class="ruby">    User.find(params[:id])</code>
         </li>

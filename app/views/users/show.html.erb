@@ -35,14 +35,16 @@
         <th>Destinatário</th>
         <th>Status</th>
       </tr>
-      <% if !@others_ticket.nil? %>
-        <tr>
-          <td><%= @others_ticket.id %></td>
-          <td><%= link_to @others_ticket.title, @others_ticket %></td>
-          <td><%= @others_ticket.user.name %></td>
-          <td><%= @others_ticket.recipient %></td>
-          <td><%= @others_ticket.status %></td>
-        </tr>
+      <% unless @others_ticket.nil? %>
+        <% @others_ticket.each do |ottickets| %>
+          <tr>
+            <td><%= ottickets.id %></td>
+            <td><%= link_to ottickets.title, ottickets %></td>
+            <td><%= ottickets.user.name %></td>
+            <td><%= ottickets.recipient %></td>
+            <td><%= ottickets.status %></td>
+          </tr>
+        <% end %>
       <% end %>
     </table>
   </div>

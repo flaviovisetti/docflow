@@ -34,4 +34,26 @@ feature 'user view ticket' do
     expect(page).to have_content(ticket.title)
     expect(page).to have_content(user_other.name)
   end
+  scenario 'and view more than one ticket which does are recipient' do
+    person = create(:person)
+    user = create(:user, person: person)
+
+    person_other = create(:person, email: 'flavio@docflux.com',
+                                   password: 'docflux1234')
+    user_other = create(:user, name: 'Flavio Visetti', person: person_other)
+
+    ticket_one = create(:ticket, title: 'Ticket teste',
+                                 recipient: 'odair@teste.com.br',
+                                 user: user_other)
+    ticket_two = create(:ticket, title: 'Outro ticket',
+                                 recipient: 'odair@teste.com.br',
+                                 user: user_other)
+
+    login_as(person)
+
+    visit user_path(user.id)
+
+    expect(page).to have_content(ticket_one.title)
+    expect(page).to have_content(ticket_two.title)
+  end
 end
