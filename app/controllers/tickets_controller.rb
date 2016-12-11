@@ -1,6 +1,5 @@
 class TicketsController < ApplicationController
   before_action :valid_ticket, only: [:show]
-  before_action :set_line_user, only: [:new]
 
   def new
     @line_user = set_line_user
@@ -9,9 +8,13 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(set_params)
-    @ticket.save
-
-    redirect_to @ticket
+    if @ticket.save
+      redirect_to @ticket
+    else
+      @line_user = set_line_user
+      flash.now[:alert] = 'Não é possível registrar o ticket'
+      render :new
+    end
   end
 
   def show

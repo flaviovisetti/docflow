@@ -26,4 +26,20 @@ feature 'user create ticket' do
     expect(page).to have_content(ticket.status)
     expect(page).to have_content(ticket.attach_file_name)
   end
+  scenario 'and try submit as empty' do
+    person = create(:person)
+    user = create(:user, person: person)
+
+    login_as(person)
+
+    visit user_path(user.id)
+
+    click_on 'Registrar Ticket'
+
+    within('form') do
+      click_on 'Registrar'
+    end
+
+    expect(page).to have_content('Não é possível registrar o ticket')
+  end 
 end
