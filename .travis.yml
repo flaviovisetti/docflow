@@ -15,6 +15,7 @@ script:
 
 deploy:
   provider: heroku
+  app: fathomless-stream-49448
   api_key:
     secure: "b80d9a26-39c4-44b0-97ff-49f9485cd8e7"
   strategy: git-ssh
