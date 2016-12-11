@@ -5,10 +5,10 @@
     </div>
     <div class="panel-body">
       <%= f.association :user, value_method: :id, label_method: :name, label: 'Usuário' %>
-      <%= f.input :title, label: 'Título' %>
-      <%= f.input :description, label: 'Descrição' %>
-      <%= f.input :recipient, label: 'Destinatário' %>
-      <%= f.input :attach, as: :file, label: 'Anexos' %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :recipient %>
+      <%= f.input :attach, as: :file %>
     </div>
   </div>
   <nav>

@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    attributes:
+      ticket:
+        title: Título
+        description: Descrição
+        recipient: Destinatário
+        status: Status
+        attach: Anexo
+      user:
+        name: Nome Completo
+        birthdate: Data Nascimento
+        phone: Telefone
+      company:
+        legal_name: Razão Social
+        mail: Email
+        legal_number: Registro Legal

@@ -15,7 +15,7 @@ feature 'user create ticket' do
     fill_in 'Título', with: ticket.title
     fill_in 'Descrição', with: ticket.description
     fill_in 'Destinatário', with: ticket.recipient
-    attach_file('Anexos', 'spec/support/fixtures/image.jpg')
+    attach_file('Anexo', 'spec/support/fixtures/image.jpg')
 
     click_on 'Registrar'
 
@@ -41,5 +41,5 @@ feature 'user create ticket' do
     end
 
     expect(page).to have_content('Não é possível registrar o ticket')
-  end 
+  end
 end

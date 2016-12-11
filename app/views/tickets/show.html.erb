@@ -17,7 +17,7 @@
     <p><strong>Status:</strong> <%= @ticket.status %></p>
   </div>
   <div class="panel-footer">
-    created at: <%= @ticket.created_at %>
+    created at: <%= l(@ticket.created_at, format: :long) %>
   </div>
 </div>
 <nav>
