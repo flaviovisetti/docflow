@@ -1,8 +1,18 @@
 <%= simple_form_for @ticket do |f| %>
-  <%= f.association :user, value_method: :id, label_method: :name, label: 'Usuário' %>
-  <%= f.input :title, label: 'Título' %>
-  <%= f.input :description, label: 'Descrição' %>
-  <%= f.input :recipient, label: 'Destinatário' %>
-  <%= f.input :attach, as: :file, label: 'Anexos' %>
-  <%= f.submit 'Registrar' %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Create a new ticket</h3>
+    </div>
+    <div class="panel-body">
+      <%= f.association :user, value_method: :id, label_method: :name, label: 'Usuário' %>
+      <%= f.input :title, label: 'Título' %>
+      <%= f.input :description, label: 'Descrição' %>
+      <%= f.input :recipient, label: 'Destinatário' %>
+      <%= f.input :attach, as: :file, label: 'Anexos' %>
+    </div>
+  </div>
+  <nav>
+    <%= f.submit 'Registrar', class: 'btn btn-default' %>
+    <%= link_to 'voltar', user_path(@line_user.id), class: 'btn btn-default' %>
+  </nav>
 <% end %>

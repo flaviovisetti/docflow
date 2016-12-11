@@ -1,3 +1,15 @@
-<strong><%= @company.legal_name %></strong>
-<p>Email: <%= @company.mail %></p>
-<p>Registro Legal: <%= @company.legal_number %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @company.legal_name %></h3>
+  </div>
+  <div class="panel-body">
+    <p>Email: <%= @company.mail %></p>
+    <p>Registro Legal: <%= @company.legal_number %></p>
+  </div>
+  <div class="panel-footer">
+    created at: <%= @company.created_at %>
+  </div>
+</div>
+<nav>
+  <%= link_to 'voltar', root_path, class: 'btn btn-default' %>
+</nav>

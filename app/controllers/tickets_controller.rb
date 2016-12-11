@@ -1,7 +1,9 @@
 class TicketsController < ApplicationController
   before_action :valid_ticket, only: [:show]
+  before_action :set_line_user, only: [:new]
 
   def new
+    @line_user = set_line_user
     @ticket = Ticket.new
   end
 
@@ -28,6 +30,10 @@ class TicketsController < ApplicationController
     else
       redirect_to user_path(user.id)
     end
+  end
+
+  def set_line_user
+    User.find_by(person_id: current_person.id)
   end
 
   def set_params

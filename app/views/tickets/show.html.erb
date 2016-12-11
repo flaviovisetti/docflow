@@ -16,6 +16,9 @@
     </p>
     <p><strong>Status:</strong> <%= @ticket.status %></p>
   </div>
+  <div class="panel-footer">
+    created at: <%= @ticket.created_at %>
+  </div>
 </div>
 <nav>
   <%= link_to 'Voltar', user_path(@ticket.user_id), class: 'btn btn-default' %>

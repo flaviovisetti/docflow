@@ -1,6 +1,16 @@
 <%= simple_form_for @company do |f| %>
-  <%= f.input :legal_name, label: 'Razão Social' %>
-  <%= f.input :mail, label: 'Email' %>
-  <%= f.input :legal_number, label: 'Registro Legal' %>
-  <%= f.submit 'Cadastrar' %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Create a new company</h3>
+    </div>
+    <div class="panel-body">
+      <%= f.input :legal_name, label: 'Razão Social' %>
+      <%= f.input :mail, label: 'Email' %>
+      <%= f.input :legal_number, label: 'Registro Legal' %>
+    </div>
+  </div>
+  <nav>
+    <%= f.submit 'Cadastrar', class: 'btn btn-default' %>
+    <%= link_to 'voltar', root_path, class: 'btn btn-default' %>
+  </nav>
 <% end %>

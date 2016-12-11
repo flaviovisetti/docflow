@@ -19,7 +19,7 @@ feature 'user create a company' do
       click_on 'Cadastrar'
     end
 
-    expect(page).to have_css('strong', text: company.legal_name)
+    expect(page).to have_css('h3', text: company.legal_name)
     expect(page).to have_content(company.mail)
     expect(page).to have_content(company.legal_number)
   end
