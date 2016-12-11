@@ -1,6 +1,9 @@
 <% if person_signed_in? %>
-  <%= link_to 'Painel do usuário', user_path(@user.id) %>
+  <%= link_to 'Painel do usuário', user_path(@user.id), class: 'btn btn-default' %>
 <% end %>
+
+</br>
+</br>
 
 <div class="panel panel-primary">
   <div class="panel-heading">

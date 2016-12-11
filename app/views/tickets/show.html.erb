@@ -3,10 +3,20 @@
     <h3 class="panel-title"><%= @ticket.title %></h3>
   </div>
   <div class="panel-body">
-    <p>Descrição: <%= @ticket.description %></p>
-    <p>Destinatário: <%= @ticket.recipient %></p>
-    <p>Originador: <%= @ticket.user.name %></p>
-    <p>Status: <%= @ticket.status %></p>
-    <p>Anexos: <%= @ticket.attach_file_name %>
+    <p><strong>Descrição:</strong> <%= @ticket.description %></p>
+    <p><strong>Destinatário:</strong> <%= @ticket.recipient %></p>
+    <p><strong>Originador:</strong> <%= @ticket.user.name %></p>
+
+    <p><strong>Anexos:</strong>
+      <% if @ticket.attach_file_name.nil? %>
+        Não existe arquivo em anexo.
+      <% else %>
+        <%= @ticket.attach_file_name %>
+      <% end %>
+    </p>
+    <p><strong>Status:</strong> <%= @ticket.status %></p>
   </div>
 </div>
+<nav>
+  <%= link_to 'Voltar', user_path(@ticket.user_id), class: 'btn btn-default' %>
+</nav>

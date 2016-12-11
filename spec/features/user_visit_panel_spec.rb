@@ -26,7 +26,10 @@ feature 'user visit panel' do
     fill_in 'Email', with: person.email
     fill_in 'person[password]', with: person.password
     fill_in 'person[password_confirmation]', with: person.password
-    click_on 'Sign up'
+
+    within('form') do
+      click_on 'Sign up'
+    end
 
     expect(current_path).to eq(new_user_path)
   end
