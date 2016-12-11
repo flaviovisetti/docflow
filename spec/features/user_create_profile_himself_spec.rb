@@ -18,7 +18,7 @@ feature 'user create profile himself' do
       click_on 'Cadastrar'
     end
 
-    expect(page).to have_css('strong', text: single_user.name)
+    expect(page).to have_css('h3', text: single_user.name)
   end
   scenario 'try save empty profile' do
     person = create(:person)

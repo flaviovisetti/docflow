@@ -12,14 +12,46 @@
   </head>
 
   <body>
-    
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="DOCFLOW" src="...">
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          
+          <li class="nav-item">
+            <% unless person_signed_in? %>
+              <%= link_to 'Log in', new_person_session_path %>
+            <% else %>
+              <%= link_to 'Logout', destroy_person_session_path, method: :delete %>
+            <% end %>
+          </li>
+          <% if person_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'Registrar Ticket', new_ticket_path %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Cadastrar Empresa', new_company_path %>
+            </li>
+            <li class="nav-item">
+              <%= link_to current_person.email %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: name %>
+      <% end %>
+    </div>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>*
     <nav class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
       </br><p>Um trabalho desenvolvido por Flávio e Rodrigo
-        | Todos os direitos reservados.</p>
+        | Colabore com este projeto incrível.</p>
       </div>
     </nav>
   </body>

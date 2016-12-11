@@ -18,6 +18,7 @@ feature 'user visit home page' do
 
   scenario 'and if user does log in' do
     person = create(:person)
+    user = create(:user, person: person)
 
     login_as(person)
 
