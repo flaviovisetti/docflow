@@ -34,6 +34,7 @@
         <th>Remetente</th>
         <th>Destinatário</th>
         <th>Status</th>
+        <th colspan="2" >Ações</th>
       </tr>
       <% unless @others_ticket.nil? %>
         <% @others_ticket.each do |ottickets| %>
@@ -43,6 +44,8 @@
             <td><%= ottickets.user.name %></td>
             <td><%= ottickets.recipient %></td>
             <td><%= ottickets.status %></td>
+            <td><%= link_to 'Aprovar' %></td>
+            <td><%= link_to 'Reprovar' %></td>
           </tr>
         <% end %>
       <% end %>
