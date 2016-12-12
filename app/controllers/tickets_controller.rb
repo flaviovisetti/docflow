@@ -19,6 +19,7 @@ class TicketsController < ApplicationController
 
   def show
     @ticket = Ticket.find(params[:id])
+    @current_user = set_line_user
   end
 
   private
@@ -29,6 +30,7 @@ class TicketsController < ApplicationController
 
     validar = TicketsPolicies.new(user, @ticket)
     if validar.own_ticket?(current_person.email)
+      @current_user = set_line_user
       render :show
     else
       redirect_to user_path(user.id)
@@ -36,7 +38,7 @@ class TicketsController < ApplicationController
   end
 
   def set_line_user
-    User.find_by(person_id: current_person.id)
+    User.where(person_id: current_person.id).first
   end
 
   def set_params
