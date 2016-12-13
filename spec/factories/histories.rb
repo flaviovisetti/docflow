@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :history do
-    comment "MyText"
+    comment 'Aprovado com sucesso. Obrigado.'
     ticket
   end
 end

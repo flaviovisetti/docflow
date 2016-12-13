@@ -44,10 +44,12 @@
             <td><%= ottickets.user.name %></td>
             <td><%= ottickets.recipient %></td>
             <td><%= ottickets.status %></td>
-            <td>
-              <%= link_to 'Aprovar', new_ticket_history_path(ottickets) %>
-            </td>
-            <td><%= link_to 'Reprovar' %></td>
+            <% if ottickets.status == "Aprovado" %>
+              <td>Visualizar Aprovação</td>
+            <% else %>
+              <td><%= link_to 'Aprovar', new_ticket_history_path(ottickets) %></td>
+              <td><%= link_to 'Reprovar' %></td>
+            <% end %>
           </tr>
         <% end %>
       <% end %>

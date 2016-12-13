@@ -9,10 +9,9 @@ feature 'user can approve tickets' do
                                    password: 'docflux1234')
     user_other = create(:user, name: 'Flavio Visetti', person: person_other)
 
-    ticket_one = create(:ticket, title: 'Ticket teste',
-                                 recipient: 'odair@teste.com.br',
-                                 user: user_other)
-
+    create(:ticket, title: 'Ticket teste',
+                    recipient: 'odair@teste.com.br',
+                    user: user_other)
 
     login_as(person)
 
@@ -35,7 +34,6 @@ feature 'user can approve tickets' do
                                  user: user_other)
     ticket_history = build(:history, ticket: ticket_one)
 
-
     login_as(person)
 
     visit user_path(user.id)
@@ -47,7 +45,7 @@ feature 'user can approve tickets' do
       click_on 'Aprovar'
     end
 
-    expect(page).to have_content(ticket_history.comment)
-    expect(page).to have_content(ticket_history.modifier)
+    expect(page).to have_content('Aprovado')
+    expect(page).to_not have_content('Aprovar')
   end
 end
