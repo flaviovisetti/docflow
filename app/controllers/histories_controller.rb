@@ -1,4 +1,6 @@
 class HistoriesController < ApplicationController
+  before_action :authenticate_person!
+
   def new
     @ticket = Ticket.find(params[:ticket_id])
     @history = History.new

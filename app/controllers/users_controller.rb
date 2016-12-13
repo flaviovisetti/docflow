@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_person!
   before_action :set_param_user, only: [:show]
   before_action :user_recipient_tickets, only: [:show]
 

@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  before_action :authenticate_person!
   before_action :valid_ticket, only: [:show]
 
   def new

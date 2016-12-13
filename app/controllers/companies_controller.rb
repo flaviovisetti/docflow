@@ -1,4 +1,6 @@
 class CompaniesController < ApplicationController
+  before_action :authenticate_person!
+
   def new
     @company = Company.new
   end
