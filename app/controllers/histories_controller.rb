@@ -8,8 +8,8 @@ class HistoriesController < ApplicationController
     @ticket = Ticket.find(params[:ticket_id])
 
     @history = History.new(set_params)
+    @history[:ticket_id] = @ticket.id
     @history.save
-
     @ticket.update(status: 'Aprovado')
 
     redirect_to user_path(set_current_user)
