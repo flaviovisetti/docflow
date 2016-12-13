@@ -9,9 +9,10 @@ class HistoriesController < ApplicationController
 
     @history = History.new(set_params)
     @history.save
+
     @ticket.update(status: 'Aprovado')
 
-    redirect_to user_path(set_ticket_user)
+    redirect_to user_path(set_current_user)
   end
 
   private
@@ -20,8 +21,7 @@ class HistoriesController < ApplicationController
     params.require(:history).permit(:comment)
   end
 
-  def set_ticket_user
-    tck = Ticket.find(params[:ticket_id])
-    User.where(person_id: tck.id).first
+  def set_current_user
+    User.where(person_id: current_person.id).first
   end
 end

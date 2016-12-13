@@ -44,7 +44,7 @@ feature 'user can approve tickets' do
     within('form') do
       click_on 'Aprovar'
     end
-
+    expect(page).to have_content(user.name)
     expect(page).to have_content('Aprovado')
     expect(page).to_not have_content('Aprovar')
   end
