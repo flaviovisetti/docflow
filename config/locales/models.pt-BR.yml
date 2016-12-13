@@ -1,4 +1,8 @@
 pt-BR:
+  ticket_status:
+    pending: Em Aberto
+    approved: Aprovado
+    reproved: Reprovado
   activerecord:
     attributes:
       ticket:

@@ -4,7 +4,7 @@ FactoryGirl.define do
     description 'Gostaria de seu comentário e sua
                  aprovação para a próxima fase de nosso projeto.'
     recipient 'sac@senado.gov.br'
-    status 'Em Aberto'
+    status 'pending'
     user
     attach { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
   end

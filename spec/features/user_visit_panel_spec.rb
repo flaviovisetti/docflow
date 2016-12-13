@@ -13,7 +13,7 @@ feature 'user visit panel' do
     expect(page).to have_content(user.name)
     expect(page).to have_content(user.tickets.first.title)
     expect(page).to have_content(user.tickets.first.recipient)
-    expect(page).to have_content(user.tickets.first.status)
+    expect(page).to have_content('Em Aberto')
     expect(page).to have_content('Registrar Ticket')
     expect(page).to have_content('Logout')
   end

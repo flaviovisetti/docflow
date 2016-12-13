@@ -5,30 +5,25 @@ class HistoriesController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.find(params[:ticket_id])
-    @history = History.new(set_params)
-    @history[:ticket_id] = @ticket.id
-    @history.save
+    ticket = Ticket.find(params[:ticket_id])
+    ticket.histories.create(history_params)
 
-    set_source(params[:commit], @ticket)
+    if params[:commit] == 'Aprovar'
+      ticket.approved!
+    else
+      ticket.reproved!
+    end
+
     redirect_to user_path(set_current_user)
   end
 
   private
 
-  def set_params
+  def history_params
     params.require(:history).permit(:comment)
   end
 
   def set_current_user
     User.where(person_id: current_person.id).first
-  end
-
-  def set_source(origin, ticket)
-    if origin == 'Aprovar'
-      ticket.update(status: 'Aprovado')
-    else
-      ticket.update(status: 'Reprovado')
-    end
   end
 end

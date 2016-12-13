@@ -11,13 +11,13 @@
         <th>Destinatário</th>
         <th>Status</th>
       </tr>
-      <% @user.tickets.each do |t| %>
+      <% @user.tickets.each do |ticket| %>
         <tr>
-          <td><%= t.id %></td>
-          <td><%= link_to t.title, t %></td>
-          <td><%= t.user.name %></td>
-          <td><%= t.recipient %></td>
-          <td><%= t.status %></td>
+          <td><%= ticket.id %></td>
+          <td><%= link_to ticket.title, ticket %></td>
+          <td><%= ticket.user.name %></td>
+          <td><%= ticket.recipient %></td>
+          <td><%= t("ticket_status.#{ticket.status}")%></td>
         </tr>
       <% end %>
     </table>
@@ -43,10 +43,10 @@
             <td><%= link_to ottickets.title, ottickets %></td>
             <td><%= ottickets.user.name %></td>
             <td><%= ottickets.recipient %></td>
-            <td><%= ottickets.status %></td>
-            <% if  ottickets.status == "Aprovado" %>
+            <td><%=  t("ticket_status.#{ottickets.status}") %></td>
+            <% if  ottickets.approved? %>
               <td><%= link_to 'Visualizar Aprovação', ottickets %></td>
-            <% elsif ottickets.status == "Reprovado" %>
+            <% elsif ottickets.reproved? %>
               <td><%= link_to 'Visualizar Reprovação', ottickets %></td>
             <% else %>
               <td><%= link_to 'Avaliar Ticket', new_ticket_history_path(ottickets) %></td>

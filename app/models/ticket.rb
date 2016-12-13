@@ -9,4 +9,6 @@ class Ticket < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :recipient, presence: true
+
+  enum status: [:pending, :approved, :reproved]
 end

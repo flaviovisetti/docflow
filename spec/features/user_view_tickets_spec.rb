@@ -13,7 +13,7 @@ feature 'user view ticket' do
     expect(page).to have_content(ticket.id)
     expect(page).to have_content(ticket.title)
     expect(page).to have_content(ticket.recipient)
-    expect(page).to have_content(ticket.status)
+    expect(page).to have_content('Em Aberto')
   end
   scenario 'and view ticket which does are recipient' do
     person = create(:person)
@@ -66,7 +66,7 @@ feature 'user view ticket' do
 
     ticket_one = create(:ticket, title: 'Ticket teste',
                                  recipient: 'odair@teste.com.br',
-                                 status: 'Aprovado',
+                                 status: :approved,
                                  user: user_other)
     ticket_history = create(:history, ticket: ticket_one)
 
