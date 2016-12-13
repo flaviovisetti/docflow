@@ -17,8 +17,7 @@ feature 'user can approve tickets' do
 
     visit user_path(user.id)
 
-    expect(page).to have_content('Aprovar')
-    expect(page).to have_content('Reprovar')
+    expect(page).to have_content('Avaliar Ticket')
   end
 
   scenario 'user approves ticket' do
@@ -38,7 +37,7 @@ feature 'user can approve tickets' do
 
     visit user_path(user.id)
 
-    click_on 'Aprovar'
+    click_on 'Avaliar Ticket'
 
     fill_in 'Comentário', with: ticket_history.comment
     within('form') do
@@ -46,6 +45,6 @@ feature 'user can approve tickets' do
     end
     expect(page).to have_content(user.name)
     expect(page).to have_content('Aprovado')
-    expect(page).to_not have_content('Aprovar')
+    expect(page).to_not have_content('Avaliar Ticket')
   end
 end

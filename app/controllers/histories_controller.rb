@@ -6,12 +6,11 @@ class HistoriesController < ApplicationController
 
   def create
     @ticket = Ticket.find(params[:ticket_id])
-
     @history = History.new(set_params)
     @history[:ticket_id] = @ticket.id
     @history.save
-    @ticket.update(status: 'Aprovado')
 
+    set_source(params[:commit], @ticket)
     redirect_to user_path(set_current_user)
   end
 
@@ -23,5 +22,13 @@ class HistoriesController < ApplicationController
 
   def set_current_user
     User.where(person_id: current_person.id).first
+  end
+
+  def set_source(origin, ticket)
+    if origin == 'Aprovar'
+      ticket.update(status: 'Aprovado')
+    else
+      ticket.update(status: 'Reprovado')
+    end
   end
 end
