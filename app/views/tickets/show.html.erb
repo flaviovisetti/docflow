@@ -20,6 +20,18 @@
     created at: <%= l(@ticket.created_at, format: :long) %>
   </div>
 </div>
+<% if @ticket.histories.size != 0 %>
+<div class="panel panel-default">
+<div class="panel-heading">
+  <h3 class="panel-title">Comentários</h3>
+</div>
+<div class="panel-body">
+  <% @ticket.histories.each do |h| %>
+    <%= h.comment %>
+  <% end %>
+</div>
+</div>
+<% end %>
 <nav>
   <%= link_to 'Voltar', user_path(@current_user.id), class: 'btn btn-default' %>
 </nav>

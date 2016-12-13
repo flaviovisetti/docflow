@@ -56,4 +56,26 @@ feature 'user view ticket' do
     expect(page).to have_content(ticket_one.title)
     expect(page).to have_content(ticket_two.title)
   end
+  scenario 'View comment after approved' do
+    person = create(:person)
+    user = create(:user, person: person)
+
+    person_other = create(:person, email: 'flavio@docflux.com',
+                                   password: 'docflux1234')
+    user_other = create(:user, name: 'Flavio Visetti', person: person_other)
+
+    ticket_one = create(:ticket, title: 'Ticket teste',
+                                 recipient: 'odair@teste.com.br',
+                                 status: 'Aprovado',
+                                 user: user_other)
+    ticket_history = create(:history, ticket: ticket_one)
+
+    login_as(person)
+
+    visit user_path(user.id)
+
+    click_on ticket_one.title
+
+    expect(page).to have_content(ticket_history.comment)
+  end
 end
