@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208235144) do
+ActiveRecord::Schema.define(version: 20161213013316) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "legal_name"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 20161208235144) do
     t.string   "legal_number"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "histories", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "ticket_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_histories_on_ticket_id"
   end
 
   create_table "people", force: :cascade do |t|

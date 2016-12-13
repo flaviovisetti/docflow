@@ -33,7 +33,7 @@ feature 'user can approve tickets' do
     ticket_one = create(:ticket, title: 'Ticket teste',
                                  recipient: 'odair@teste.com.br',
                                  user: user_other)
-    ticket_history = build(:ticket_history, ticket: ticket_one)
+    ticket_history = build(:history, ticket: ticket_one)
 
 
     login_as(person)
@@ -44,7 +44,7 @@ feature 'user can approve tickets' do
 
     fill_in 'Comentário', with: ticket_history.comment
     within('form') do
-      click_on 'Registrar'
+      click_on 'Aprovar'
     end
 
     expect(page).to have_content(ticket_history.comment)

@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :users, only: [:new, :create, :show]
   resources :companies, only: [:new, :create, :show]
-  resources :tickets, only: [:new, :create, :show]
+  resources :tickets, only: [:new, :create, :show] do
+    resources :histories, only: [:new, :create, :show]
+  end
 end
