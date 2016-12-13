@@ -45,7 +45,7 @@
             <td><%= ottickets.recipient %></td>
             <td><%= ottickets.status %></td>
             <% if ottickets.status == "Aprovado" %>
-              <td>Visualizar Aprovação</td>
+              <td><%= link_to 'Visualizar Aprovação', ottickets %></td>
             <% else %>
               <td><%= link_to 'Aprovar', new_ticket_history_path(ottickets) %></td>
               <td><%= link_to 'Reprovar' %></td>
