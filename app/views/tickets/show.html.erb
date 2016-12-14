@@ -14,7 +14,7 @@
         <%= @ticket.attach_file_name %>
       <% end %>
     </p>
-    <p><strong>Status:</strong> <%= t("ticket_status.#{@ticket.status}") %></p>
+    <p><strong>Status:</strong> <%= I18n.t("ticket_status.#{@ticket.status}") %></p>
   </div>
   <div class="panel-footer">
     created at: <%= l(@ticket.created_at, format: :long) %>
