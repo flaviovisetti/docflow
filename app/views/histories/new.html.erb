@@ -1,5 +1,5 @@
 <%= simple_form_for [@ticket, @history] do |f| %>
   <%= f.input :comment %>
-  <%= f.submit 'Aprovar' %>
-  <%= f.submit 'Reprovar' %>
+  <%= f.submit 'Aprovar', class: 'btn btn-default' %>
+  <%= f.submit 'Reprovar', class: 'btn btn-default' %>
 <% end %>

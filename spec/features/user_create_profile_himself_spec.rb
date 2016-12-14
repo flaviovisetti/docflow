@@ -10,7 +10,6 @@ feature 'user create profile himself' do
     visit new_user_path
 
     fill_in 'Nome Completo', with: single_user.name
-    select person.email, from: 'email'
     fill_in 'Telefone', with: single_user.phone
     fill_in 'Data Nascimento', with: single_user.birthdate
 

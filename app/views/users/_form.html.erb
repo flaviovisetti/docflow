@@ -1,7 +1,6 @@
 <%= simple_form_for @user do |u| %>
-  <%= u.association :person, value_method: :id, label_method: :email, label: 'email' %>
   <%= u.input :name %>
   <%= u.input :phone %>
   <%= u.input :birthdate %>
-  <%= u.submit 'Cadastrar' %>
+  <%= u.submit 'Cadastrar', class: 'btn btn-default' %>
 <% end %>
