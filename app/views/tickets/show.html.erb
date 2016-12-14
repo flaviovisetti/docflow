@@ -14,7 +14,22 @@
         <%= @ticket.attach_file_name %>
       <% end %>
     </p>
-    <p><strong>Status:</strong> <%= t("ticket_status.#{@ticket.status}") %></p>
+    <p>
+      <strong>Status:</strong>
+      <% if @ticket.pending? %>
+        <span class="label label-warning">
+          <%= t("ticket_status.#{@ticket.status}") %>
+        </span>
+      <% elsif @ticket.approved? %>
+        <span class="label label-success">
+          <%= t("ticket_status.#{@ticket.status}") %>
+        </span>
+      <% else %>
+        <span class="label label-danger">
+          <%= t("ticket_status.#{@ticket.status}") %>
+        </span>
+      <% end %>
+    </p>
   </div>
   <div class="panel-footer">
     created at: <%= l(@ticket.created_at, format: :long) %>

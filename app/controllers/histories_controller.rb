@@ -1,9 +1,11 @@
 class HistoriesController < ApplicationController
   before_action :authenticate_person!
+  before_action :set_current_user
 
   def new
     @ticket = Ticket.find(params[:ticket_id])
     @history = History.new
+    @current_user = set_current_user
   end
 
   def create

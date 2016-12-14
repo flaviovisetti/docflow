@@ -17,7 +17,26 @@
           <td><%= link_to ticket.title, ticket %></td>
           <td><%= ticket.user.name %></td>
           <td><%= ticket.recipient %></td>
-          <td><%= t("ticket_status.#{ticket.status}")%></td>
+          <% if ticket.pending? %>
+            <td>
+              <span class="label label-warning">
+                <%= t("ticket_status.#{ticket.status}")%>
+              </span>
+            </td>
+          <% elsif ticket.approved? %>
+            <td>
+              <span class="label label-success">
+                <%= t("ticket_status.#{ticket.status}")%>
+              </span>
+            </td>
+          <% else %>
+            <td>
+              <span class="label label-danger">
+                <%= t("ticket_status.#{ticket.status}")%>
+              </span>
+            </td>
+          <% end %>
+
         </tr>
       <% end %>
     </table>
@@ -43,12 +62,27 @@
             <td><%= link_to ottickets.title, ottickets %></td>
             <td><%= ottickets.user.name %></td>
             <td><%= ottickets.recipient %></td>
-            <td><%=  t("ticket_status.#{ottickets.status}") %></td>
+
             <% if  ottickets.approved? %>
+              <td>
+                <span class="label label-success">
+                  <%=  t("ticket_status.#{ottickets.status}") %>
+                </span>
+              </td>
               <td><%= link_to 'Visualizar Aprovação', ottickets %></td>
             <% elsif ottickets.reproved? %>
+              <td>
+                <span class="label label-danger">
+                  <%=  t("ticket_status.#{ottickets.status}") %>
+                </span>
+              </td>
               <td><%= link_to 'Visualizar Reprovação', ottickets %></td>
             <% else %>
+              <td>
+                <span class="label label-warning">
+                    <%=  t("ticket_status.#{ottickets.status}") %>
+                </span>
+              </td>
               <td><%= link_to 'Avaliar Ticket', new_ticket_history_path(ottickets) %></td>
             <% end %>
           </tr>
