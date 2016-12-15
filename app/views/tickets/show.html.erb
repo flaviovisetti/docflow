@@ -11,7 +11,7 @@
       <% if @ticket.attach_file_name.nil? %>
         Não existe arquivo em anexo.
       <% else %>
-        <%= @ticket.attach_file_name %>
+        <%= image_tag @ticket.attach.url(:thumb) %>
       <% end %>
     </p>
     <p>

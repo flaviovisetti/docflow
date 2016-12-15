@@ -23,7 +23,7 @@ feature 'user create ticket' do
     expect(page).to have_content(ticket.recipient)
     expect(page).to have_content(ticket.user.name)
     expect(page).to have_content('Em Aberto')
-    expect(page).to have_content(ticket.attach_file_name)
+    expect(page).to have_css("img[src*='image.jpg']")
   end
 
   scenario 'and try submit as empty' do
