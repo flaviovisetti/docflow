@@ -22,3 +22,7 @@ public/system/
 
 # Ignore Byebug command history file.
 .byebug_history
+
+config/database.yml
+
+.DS_Store

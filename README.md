@@ -1,24 +1,60 @@
-# README
+## Docflow
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Requirements
 
-Things you may want to cover:
+- Ruby 2.3.1
+- Bundler 1.16
+- PostgreSQL 9.6
+- Docker (Optional)
 
-* Ruby version
+### Environment Variables
 
-* System dependencies
+- POSTGRESQL_HOST
+- POSTGRESQL_USERNAME
+- POSTGRESQL_PASSWORD
 
-* Configuration
+### Setup
 
-* Database creation
+#### App
 
-* Database initialization
+Install Dependencies
 
-* How to run the test suite
+```
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Make database and load schema
 
-* Deployment instructions
+```
+cp config/database.yml.app.sample config/database.yml
+bundle exec rails db:create db:schema:load
+```
 
-* ...
+#### Setup by Docker
+
+```
+cp config/database.yml.docker.sample config/database.yml
+docker-compose run build
+```
+
+### Test
+
+Run tests
+
+```
+rspec spec
+```
+
+### Run application
+
+#### App
+
+```
+bundle exec rails server -b 0.0.0.0 -p 3000
+```
+
+#### Docker
+
+```
+docker-compose up
+```
