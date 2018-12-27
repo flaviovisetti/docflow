@@ -1,5 +1,7 @@
 ## Docflow
 
+[![Build Status](https://travis-ci.org/flaviovisetti/docflow.svg?branch=master)](https://travis-ci.org/flaviovisetti/docflow)
+
 ### Requirements
 
 - Ruby 2.3.1
