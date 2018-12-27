@@ -4,7 +4,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", ">= 5.2.0"
 gem 'pg','~> 0.19','>= 0.19.0'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -19,7 +19,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
-  gem 'rubocop', require: false
+  gem "rubocop", ">= 0.49.0", require: false
 end
 
 group :test do
