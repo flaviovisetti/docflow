@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TicketsController < ApplicationController
   before_action :authenticate_person!
   before_action :set_current_user

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Ticket < ApplicationRecord
   belongs_to :user
   has_many :histories
@@ -10,5 +12,5 @@ class Ticket < ApplicationRecord
   validates :description, presence: true
   validates :recipient, presence: true
 
-  enum status: [:pending, :approved, :reproved]
+  enum status: %i[pending approved reproved]
 end

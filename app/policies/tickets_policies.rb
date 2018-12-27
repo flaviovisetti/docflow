@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TicketsPolicies
   attr_reader :user, :ticket
 

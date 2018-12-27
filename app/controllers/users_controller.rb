@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :authenticate_person!
   before_action :set_param_user, only: [:show]

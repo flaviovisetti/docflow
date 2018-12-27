@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryGirl.define do
   factory :history do
     comment 'Aprovado com sucesso. Obrigado.'
