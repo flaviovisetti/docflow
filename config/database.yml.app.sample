@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  host: ENV['POSTGRESQL_HOST']
+  user: ENV['POSTGRESQL_USERNAME']
+  password: ENV['POSTGRESQL_PASSWORD']
+  port: 5432
+
+development:
+  <<: *default
+  database: docflow_development
+
+test:
+  <<: *default
+  database: docflow_test
+
+production:
+  <<: *default
+  database: docflow_production
