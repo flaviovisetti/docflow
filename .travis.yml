@@ -13,10 +13,10 @@ script:
   - bundle exec rubocop
   - bundle exec rspec spec
 
-deploy:
-  provider: heroku
-  app: docflowbr
-  api_key:
-    secure: "b80d9a26-39c4-44b0-97ff-49f9485cd8e7"
-  strategy: git-ssh
-  run: rails db:migrate
+# deploy:
+#   provider: heroku
+#   app: docflowbr
+#   api_key:
+#     secure: "b80d9a26-39c4-44b0-97ff-49f9485cd8e7"
+#   strategy: git-ssh
+#   run: rails db:migrate
