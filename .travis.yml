@@ -2,21 +2,18 @@ language: ruby
 rvm:
   - 2.3.1
 
+services:
+  - postgresql
+
 branches:
   only:
     - master
 
 before_script:
-  - bundle exec rails db:create
-  - bundle exec rails db:migrate
+  - psql -c 'create database travis_ci_test' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - bundle exec rails db:create db:schema:load
+
 script:
   - bundle exec rubocop
   - bundle exec rspec spec
-
-# deploy:
-#   provider: heroku
-#   app: docflowbr
-#   api_key:
-#     secure: "b80d9a26-39c4-44b0-97ff-49f9485cd8e7"
-#   strategy: git-ssh
-#   run: rails db:migrate
