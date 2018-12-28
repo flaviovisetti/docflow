@@ -16,7 +16,7 @@ gem 'uglifier', '~> 4.1', '>= 4.1.20'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem "rubocop", ">= 0.49.0", require: false
