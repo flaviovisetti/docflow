@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.2'
-gem 'devise'
+gem 'devise', '~> 4.5'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem "paperclip", ">= 5.2.0"
@@ -9,7 +9,7 @@ gem 'pg','~> 0.19','>= 0.19.0'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'simple_form'
+gem 'simple_form', '~> 4.1'
 gem 'turbolinks', '~> 5.2'
 gem 'uglifier', '~> 4.1', '>= 4.1.20'
 
