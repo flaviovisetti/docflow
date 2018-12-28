@@ -8,10 +8,10 @@ gem "paperclip", ">= 5.2.0"
 gem 'pg','~> 0.19','>= 0.19.0'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'simple_form'
-gem 'turbolinks', '~> 5'
-gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks', '~> 5.2'
+gem 'uglifier', '~> 4.1', '>= 4.1.20'
 
 group :development, :test do
   gem 'byebug', platform: :mri

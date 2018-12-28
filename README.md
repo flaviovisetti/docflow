@@ -35,8 +35,14 @@ bundle exec rails db:create db:schema:load
 #### Setup by Docker
 
 ```
-cp config/database.yml.docker.sample config/database.yml
 docker-compose run build
+```
+
+Make database and load schema
+
+```
+cp config/database.yml.docker.sample config/database.yml
+docker-compose run --rm web bundle exec rails db:create db:schema:load
 ```
 
 ### Test
