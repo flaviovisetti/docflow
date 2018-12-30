@@ -4,7 +4,7 @@
 
 ### Requirements
 
-- Ruby 2.3.1
+- Ruby 2.5.3
 - Bundler 1.16
 - PostgreSQL 9.6
 - Docker (Optional)
