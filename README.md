@@ -29,7 +29,7 @@ Make database and load schema
 
 ```
 cp config/database.yml.app.sample config/database.yml
-bundle exec rails db:create db:schema:load
+bundle exec rails db:create db:migrate
 ```
 
 #### Setup by Docker
@@ -42,7 +42,7 @@ Make database and load schema
 
 ```
 cp config/database.yml.docker.sample config/database.yml
-docker-compose run --rm web bundle exec rails db:create db:schema:load
+docker-compose run --rm web bundle exec rails db:create db:migrate
 ```
 
 ### Test
