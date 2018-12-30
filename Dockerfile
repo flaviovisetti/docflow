@@ -1,11 +1,11 @@
-FROM ruby:2.3.1-alpine
+FROM ruby:2.5.3-alpine
 
 RUN set -x \
     && apk update \
     && apk upgrade --no-cache \
     && apk add --no-cache --virtual build-dependencies \
     build-base libc-dev linux-headers tzdata vim \
-    openssl postgresql-dev nodejs imagemagick \
+    libressl postgresql-dev nodejs imagemagick \
     && apk add --no-cache \
     libxml2-dev \
     libxslt-dev \
