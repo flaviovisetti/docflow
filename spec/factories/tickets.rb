@@ -3,8 +3,10 @@
 FactoryBot.define do
   factory :ticket do
     title { 'Projeto Lava Jato' }
-    description { 'Gostaria de seu comentário e sua' \
-                  'aprovação para a próxima fase de nosso projeto.' }
+    description do
+      'Gostaria de seu comentário e sua' \
+      'aprovação para a próxima fase de nosso projeto.'
+    end
     recipient { 'sac@senado.gov.br' }
     status { 'pending' }
     user
