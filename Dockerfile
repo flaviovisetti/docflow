@@ -5,7 +5,7 @@ RUN set -x \
     && apk upgrade --no-cache \
     && apk add --no-cache --virtual build-dependencies \
     build-base libc-dev linux-headers tzdata vim \
-    openssl postgresql-dev nodejs\
+    openssl postgresql-dev nodejs imagemagick \
     && apk add --no-cache \
     libxml2-dev \
     libxslt-dev \
