@@ -8,7 +8,7 @@ FactoryBot.define do
       'aprovação para a próxima fase de nosso projeto.'
     end
     recipient { 'sac@senado.gov.br' }
-    status { 'pending' }
+    status { 0 }
     user
     attach { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
   end
