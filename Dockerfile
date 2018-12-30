@@ -1,19 +1,26 @@
-FROM ruby:2.3.1
+FROM ruby:2.3.1-alpine
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
-    && apt-get update && apt-get install -y build-essential \
-    postgresql-client \
-    vim \
-    nodejs
+RUN set -x \
+    && apk update \
+    && apk upgrade --no-cache \
+    && apk add --no-cache --virtual build-dependencies \
+    build-base libc-dev linux-headers tzdata vim \
+    openssl postgresql-dev nodejs\
+    && apk add --no-cache \
+    libxml2-dev \
+    libxslt-dev \
+    && gem install nokogiri \
+    -- --use-system-libraries \
+    --with-xml2-config=/usr/bin/xml2-config \
+    --with-xslt-config=/usr/bin/xslt-config
 
-WORKDIR /tmp/
-COPY Gem* ./
+WORKDIR /tmp
+COPY Gemf* ./
 RUN bundle install
 
 WORKDIR /var/www/docflow
-COPY . .
+COPY . ./
 
 EXPOSE 3000
 
-CMD ['rails', 's', '-b 0.0.0.0']
-
+CMD ["bundle exec puma -C config/puma.rb"]
